@@ -78,7 +78,6 @@ Sonda en fazla dört kişiyi 60 saniyelik demo için sahneye davet ediyoruz: lin
 
 ## Slaytlar
 
-- [Konuşma slaytları](https://esrakadah.github.io/devfest-gaziantep-2026-atolye/slaytlar/konusma/)
 - [Atölye slaytları](https://esrakadah.github.io/devfest-gaziantep-2026-atolye/slaytlar/atolye/)
 
 Bilgisayarda ok tuşlarıyla gezinilir.
