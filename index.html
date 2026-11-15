@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Backyard Barista Türkçe</title>
+<meta name="description" content="Google'ın Backyard Barista rehberinin Türkçe uyarlaması: AI Studio ile kendi kahve uygulamanı kur. Esra Kadah, DevFest Gaziantep, 15 Kasım 2026.">
+<meta property="og:title" content="DevFest Gaziantep 2026 Atölyesi: Backyard Barista (Türkçe)">
+<meta property="og:description" content="AI Studio'da kendi kahve uygulamanı kur, Gemini senin baristan olsun.">
+<meta property="og:image" content="https://esrakadah.github.io/devfest-gaziantep-2026-atolye/img/social.png">
+<meta name="theme-color" content="#0e1824">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400;500;600;700&family=Google+Sans+Code:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f8fafd; --bg2:#eef3fb; --card:#ffffff; --ink:#202124; --muted:#5f6368; --line:#dfe3ea;
+  --blue:#1a73e8; --red:#d93025; --yellow:#b06000; --green:#188038;
+  --blue-soft:#e8f0fe; --red-soft:#fce8e6; --yellow-soft:#fef7e0; --green-soft:#e6f4ea;
+  --shadow:0 1px 2px rgba(32,33,36,.06),0 8px 24px rgba(32,33,36,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0e1824; --bg2:#13212f; --card:#162434; --ink:#eef4fb; --muted:#a7b4c4; --line:#24364a;
+    --blue:#8ab4f8; --red:#f28b82; --yellow:#fdd663; --green:#81c995;
+    --blue-soft:rgba(138,180,248,.12); --red-soft:rgba(242,139,130,.12); --yellow-soft:rgba(253,214,99,.12); --green-soft:rgba(129,201,149,.12);
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Google Sans Flex",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55;font-size:17px}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.bar{height:6px;background:linear-gradient(90deg,#4285f4 0 25%,#ea4335 25% 50%,#fbbc04 50% 75%,#34a853 75%)}
+header.hero{background:radial-gradient(1200px 400px at 85% -10%,var(--blue-soft),transparent 60%),radial-gradient(800px 300px at -10% 110%,var(--yellow-soft),transparent 60%),var(--bg2);border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding-top:56px;padding-bottom:56px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.chip{font-family:"Google Sans Code",ui-monospace,monospace;font-size:13px;letter-spacing:.02em;padding:5px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--muted)}
+.chip.b{color:var(--blue);border-color:color-mix(in srgb,var(--blue) 40%,transparent)}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.05;margin:0 0 14px;letter-spacing:-.02em;font-weight:700}
+h1 .salt{color:var(--red)}
+.lead{font-size:clamp(17px,2.2vw,20px);color:var(--muted);margin:0 0 26px;max-width:34em}
+.lead strong{color:var(--ink);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 20px;border-radius:999px;font-weight:600;font-size:16px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.btn:hover{text-decoration:none;border-color:var(--blue)}
+.btn.primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+@media (prefers-color-scheme:dark){.btn.primary{color:#0e1824}}
+.shot{border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:var(--card)}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{font-size:14px;color:var(--muted);padding:10px 14px;border-top:1px solid var(--line)}
+section{padding:52px 0 8px}
+h2{font-size:clamp(24px,3.4vw,32px);margin:0 0 6px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0 0 24px}
+.grid{display:grid;gap:16px}
+.g4{grid-template-columns:repeat(3,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--accent,var(--blue))}
+a.card{color:var(--ink);display:block}
+a.card:hover{text-decoration:none;border-color:var(--accent,var(--blue))}
+.card h3{margin:6px 0 6px;font-size:19px}
+.card p{margin:0;color:var(--muted);font-size:15.5px}
+.k{font-family:"Google Sans Code",ui-monospace,monospace;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent,var(--blue))}
+.go{margin-top:14px;font-weight:600;color:var(--accent,var(--blue));font-size:15px}
+.blue{--accent:var(--blue)} .red{--accent:var(--red)} .yellow{--accent:var(--yellow)} .green{--accent:var(--green)}
+.rounds{display:grid;grid-template-columns:10fr 15fr 10fr;gap:10px;margin-bottom:16px}
+.rounds div{border-radius:12px;padding:10px 14px;font-weight:600;font-size:15px}
+.r1{background:var(--blue-soft);color:var(--blue)} .r2{background:var(--yellow-soft);color:var(--yellow)} .r3{background:var(--green-soft);color:var(--green)}
+ol.steps{margin:0;padding-left:20px;color:var(--muted);font-size:15.5px}
+ol.steps li{margin:4px 0}
+ol.steps code,.card code{font-family:"Google Sans Code",ui-monospace,monospace;font-size:14px;background:var(--bg2);padding:1px 6px;border-radius:6px;color:var(--ink)}
+.check{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.q{display:flex;gap:14px;align-items:flex-start}
+.num{flex:0 0 36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:700;background:var(--accent-soft,var(--blue-soft));color:var(--accent,var(--blue))}
+.quote{margin:28px 0 0;padding:22px 24px;border-radius:18px;background:var(--red-soft);color:var(--ink);font-size:clamp(18px,2.4vw,22px);font-weight:600}
+.quote span{display:block;font-size:14px;font-weight:400;color:var(--muted);margin-top:6px}
+footer{margin-top:56px;border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:14.5px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;gap:28px;padding-top:36px;padding-bottom:36px}
+  .g4{grid-template-columns:1fr 1fr}
+  .g3,.check{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .g4{grid-template-columns:1fr}
+  .rounds{grid-template-columns:1fr}
+  .btn{flex:1 1 100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+<div class="bar"></div>
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <div class="chips">
+        <span class="chip b">DevFest Gaziantep 2026</span>
+        <span class="chip">15 Kasım · 15:00 - 16:30</span>
+        <span class="chip">AI Studio + Gemini</span>
+      </div>
+      <h1>Backyard <span class="salt">Barista</span>, Türkçe</h1>
+      <p class="lead">Google AI Studio'da kendi kahve uygulamanı kuruyorsun. <strong>Gemini senin baristan:</strong> tat tercihine göre çekirdek, kavrum, süt ve tarif öneriyor. Sonra demleme zamanlayıcısı ve alışveriş listesi, en sonda yayın. Google'ın resmi <a href="https://docs.google.com/document/d/12Vvc5VPJkHvRzgMgcHdvMFDzxsWtfBZzzoo0Y9HM_8M/edit?tab=t.0">DevFest rehberinden</a> Türkçeye uyarlandı.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://github.com/esrakadah/devfest-gaziantep-2026-atolye">Atölye rehberi ve prompt'lar</a>
+        <a class="btn" href="https://ai.studio/build">AI Studio'yu aç</a>
+      </div>
+    </div>
+    <figure class="shot">
+      <img src="img/oyun.jpg" width="960" height="807" alt="Konuşmadaki örnek kafe: tezgahta içecekler, tatlılar, şeker, tuz ve acı sos">
+      <figcaption>Konuşmadaki örnek kafe (Flutter): tatlıya tuz atarsan Gemini yakalar, 1 yıldız. <a href="https://backyard-barista-389486729482.europe-west3.run.app/?remote_city=gaziantep">Oyna</a></figcaption>
+    </figure>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>Buradan başla</h2>
+    <p class="sub">Telefonunla okuttuysan, rehberi bilgisayarında aç.</p>
+    <div class="grid g4">
+      <a class="card blue" href="https://github.com/esrakadah/devfest-gaziantep-2026-atolye">
+        <span class="k">Rehber</span><h3>Atölye ve prompt'lar</h3>
+        <p>Üç turun Türkçe prompt'ları, kopyalamaya hazır.</p><div class="go">GitHub'da aç</div>
+      </a>
+      <a class="card green" href="https://backyard-barista-389486729482.europe-west3.run.app/?remote_city=gaziantep">
+        <span class="k">Demo</span><h3>Örnek kafe</h3>
+        <p>Konuşmadaki Flutter oyunu, Cloud Run'da. Telefondan da oynanır.</p><div class="go">Kafeyi aç</div>
+      </a>
+      <a class="card red" href="slaytlar/atolye/">
+        <span class="k">Slayt</span><h3>Atölye</h3>
+        <p>Turlar, kontrol noktaları ve yayın adımları.</p><div class="go">Slaytları aç</div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Üç tur, 35 dakika</h2>
+    <p class="sub">Her özelliği ekleyince dene. Geride kalırsan bir tur atla.</p>
+    <div class="rounds"><div class="r1">1. Tur · 10 dk</div><div class="r2">2. Tur · 15 dk</div><div class="r3">3. Tur · 10 dk</div></div>
+    <div class="grid g3">
+      <div class="card blue"><span class="k">Tur 1</span><h3>Barista uygulaması</h3>
+        <ol class="steps"><li><a href="https://ai.studio/build">ai.studio/build</a>, kişisel Gmail ile gir.</li><li><a href="https://github.com/esrakadah/devfest-gaziantep-2026-atolye/blob/main/promptlar/tur-1-barista.md"><code>tur-1-barista.md</code></a> prompt'unu yapıştır, <strong>Build</strong>.</li><li>Baristana bir kahve sor.</li></ol></div>
+      <div class="card yellow"><span class="k">Tur 2</span><h3>Zamanlayıcı ve liste</h3>
+        <ol class="steps"><li><a href="https://github.com/esrakadah/devfest-gaziantep-2026-atolye/blob/main/promptlar/tur-2-demleme-ve-liste.md"><code>tur-2-demleme-ve-liste.md</code></a> ile demleme zamanlayıcısı ekle.</li><li>Sonra alışveriş listesi.</li><li>Bonus: Firebase tarif defteri.</li></ol></div>
+      <div class="card green"><span class="k">Tur 3</span><h3>Yayınla</h3>
+        <ol class="steps"><li><a href="https://github.com/esrakadah/devfest-gaziantep-2026-atolye/blob/main/promptlar/tur-3-yayinla.md"><code>tur-3-yayinla.md</code></a>: <strong>Publish</strong> ya da <strong>Share</strong>.</li><li>Yayın linkini telefonundan aç.</li><li>Elini kaldır, sahnede 60 saniye göster.</li></ol></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Her turdan sonra oyunda kontrol et</h2>
+    <p class="sub">AI kodu yazdı, kontrol sende: AI cevabına güvenebiliyor muyuz?</p>
+    <div class="check">
+      <div class="card blue q"><div class="num">1</div><div><h3>Cevap hep aynı düzende mi?</h3><p>Tarif kartı her seferinde aynı alanlarla mı geliyor?</p></div></div>
+      <div class="card yellow q" style="--accent-soft:var(--yellow-soft)"><div class="num">2</div><div><h3>İnternet giderse ne oluyor?</h3><p>Uygulama donuyor mu, anlaşılır bir hata mı gösteriyor?</p></div></div>
+      <div class="card green q" style="--accent-soft:var(--green-soft)"><div class="num">3</div><div><h3>Kim hesaplıyor?</h3><p>Öneriyi model yazsın, zamanlayıcıyı ve listeyi kod hesaplasın.</p></div></div>
+    </div>
+    <p class="quote">Sonda en fazla dört kişiyi 60 saniyelik demo için sahneye davet ediyoruz.<span>Linkini aç, baristana bir kahve sor, göster.</span></p>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Esra Kadah · Flutter &amp; Dart GDE · <a href="https://esratech.com">esratech.com</a> · <a href="https://github.com/esrakadah">@esrakadah</a></span>
+    <span>Uyarlandığı rehber: <a href="https://docs.google.com/document/d/12Vvc5VPJkHvRzgMgcHdvMFDzxsWtfBZzzoo0Y9HM_8M/edit?tab=t.0">The Backyard Barista (Google)</a> · Örnek kafe: <a href="https://github.com/esrakadah/devfest-2026-backyard-barista-cloudrun">ana repo</a> · Google'ın resmi materyali değildir.</span>
+  </div>
+</footer>
+</body>
+</html>
