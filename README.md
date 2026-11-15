@@ -1,9 +1,10 @@
 # DevFest Gaziantep 2026 Atölyesi: Tatlı mı Tuzlu mu? ☕🥐🧂
 
 **Konuşma:** Shipping Flutter + Gemini to Production with Firebase AI Logic: Real Numbers and Live Coding
+
 **Konuşmacı:** Esra Kadah (Flutter & Dart GDE, Antigua Mobile) · 15 Kasım 2026, 15:00 - 16:30
 
-Bugün iki oyunculu küçük bir kafe oyunu kuruyoruz. Tepsiye içecek, tatlı ve şeker koyuyorsunuz, Gemini müşteri olup yorum yazıyor. Şekerin yanında bir **tuz** var: tatlıya tuz atarsanız Gemini bunu yakalıyor ve 1 yıldız veriyor. 😄
+Bugün iki oyunculu küçük bir kafe oyunu kuruyoruz. Tepsiye içecek, tatlı ve şeker koyuyorsun, Gemini müşteri olup yorum yazıyor. Şekerin yanında bir **tuz** var: tatlıya tuz atarsan müşteri bunu yakalıyor ve 1 yıldız veriyor.
 
 > Kodu artık AI da yazıyor. Sizin işiniz geleni kontrol etmek.
 
@@ -15,11 +16,9 @@ Baklava + kahve + şeker koy: 5 yıldız. Şimdi şekerin yerine tuz koy: 1 yıl
 
 ## Yolunu seç
 
-| Yol | Ne lazım | Ne yapıyorsun |
-|---|---|---|
-| **A: Tarayıcı** (çoğunuz) | Bilgisayar + kişisel Gmail hesabı | Google AI Studio'da prompt yapıştırıp oyunu kuruyor, yayınlıyorsun |
-| **B: Flutter** | Flutter kurulu bilgisayar | Hazır Flutter projesini çalıştırıp değiştiriyorsun |
-| **C: Telefon** | Sadece telefon | Örnek kafeyi ve arkadaşlarının kafelerini test ediyorsun |
+- **A: Tarayıcı** (çoğunuz): bilgisayar ve kişisel Gmail hesabı. Google AI Studio'ya prompt yapıştırıp oyunu kurup yayınlıyorsun.
+- **B: Flutter**: Flutter kurulu bilgisayar. Hazır Flutter projesini çalıştırıp değiştiriyorsun.
+- **C: Telefon**: sadece telefon. Örnek kafeyi ve arkadaşlarının kafelerini test ediyorsun.
 
 ## Yol A: Tarayıcıda, kurulum yok
 
@@ -37,7 +36,7 @@ AI kodu yazdı, kontrol sende:
 
 1. **Cevap şemaya uyuyor mu?** Gemini her seferinde aynı alanları (yıldız, yorum) döndürüyor mu?
 2. **İnternet giderse ne oluyor?** Oyun donuyor mu, yedek cevap mı veriyor?
-3. **Puanı kim veriyor?** Şakayı model yazsın, 1 yıldız kuralı kodda olsun.
+3. **Puanı kim veriyor?** Tuz varken model 5 yıldız dese bile ekranda 1 yıldız görünüyor mu?
 
 ## Yol B: Flutter
 
@@ -60,10 +59,10 @@ flutter run -d chrome --dart-define=DEFAULT_CITY=gaziantep --dart-define=OFFLINE
 Ücretsiz Gemini anahtarı: [aistudio.google.com/apikey](https://aistudio.google.com/apikey). Anahtarla:
 
 ```bash
-flutter run -d chrome --dart-define=DEFAULT_CITY=gaziantep --dart-define=GEMINI_API_KEY=anahtarin
+flutter run -d chrome --dart-define=DEFAULT_CITY=gaziantep --dart-define=GEMINI_API_KEY=ANAHTARIN
 ```
 
-Sonra Antigravity ya da sevdiğin AI asistanına Tur 2 prompt'unu verip kendi tatlını ekle. Cloud Run'a yayın komutları: [`promptlar/tur-3-yayinla.md`](promptlar/tur-3-yayinla.md), Yol B bölümü.
+Sonra Antigravity ya da sevdiğin AI asistanına projeyi göster, kendi tatlını ve şaka malzemeni ekletip Gemini yargıcını dene (fikir için Tur 2'ye bak). Cloud Run'a yayın komutları: [`promptlar/tur-3-yayinla.md`](promptlar/tur-3-yayinla.md), Yol B bölümü.
 
 ## Sahne ve ödül 🏆
 
@@ -71,10 +70,17 @@ Oyununu yayınlayıp sahnede **60 saniyede** gösteren ilk dört kafeye Google r
 
 ## Bugünden dört şey
 
-1. Cevabı **şemayla** isteyin.
-2. Her AI çağrısına **zaman aşımı ve yedek plan** koyun.
-3. Anahtar ve kota **kişiye özel** olsun, anahtar tarayıcıya gömülmesin.
-4. **Şakayı model yazsın, puanı kodunuz versin.**
+1. Cevabı şemayla isteyin.
+2. Her AI çağrısına zaman aşımı ve yedek plan koyun.
+3. Anahtar ve kota kişiye özel olsun, anahtar tarayıcıya gömülmesin.
+4. Şakayı model yazsın, puanı kodunuz versin.
+
+## Slaytlar
+
+- [Konuşma slaytları](https://esrakadah.github.io/devfest-gaziantep-2026-atolye/slaytlar/konusma/)
+- [Atölye slaytları](https://esrakadah.github.io/devfest-gaziantep-2026-atolye/slaytlar/atolye/)
+
+Bilgisayarda ok tuşlarıyla gezinilir.
 
 ## Daha fazlası
 
