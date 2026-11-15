@@ -74,7 +74,7 @@ Sonda en fazla dört kişiyi 60 saniyelik demo için sahneye davet ediyoruz: lin
 1. Cevabı şemayla iste: düz metin değil, hep aynı alanlar.
 2. Her AI çağrısına zaman aşımı ve yedek plan koy.
 3. Anahtar ve kota kişiye özel olsun, anahtar tarayıcıya gömülmesin.
-4. Öneriyi model yazsın, hesabı kodun yapsın.
+4. Öneriyi model yazsın, kararı kodun versin.
 
 ## Slaytlar
 
