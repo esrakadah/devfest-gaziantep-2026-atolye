@@ -3,7 +3,7 @@
 Aşağıdaki kutunun tamamını kopyala, [Google AI Studio](https://aistudio.google.com) **Build** moduna yapıştır ve gönder.
 
 ```text
-"Tatlı mı Tuzlu mu?" adında, iki kişilik, hiç yazı yazmadan oynanan eğlenceli bir web oyunu yap. Arayüz Türkçe olsun.
+"Tatlı mı Tuzlu mu?" adında, iki kişilik, klavye kullanmadan sadece dokunarak oynanan eğlenceli bir web oyunu yap. Arayüz Türkçe olsun.
 
 1. KAFE: Üst barda "DevFest Gaziantep · Şehitkamil Baklava & Kahve Evi" yazsın.
 
@@ -11,13 +11,14 @@ Aşağıdaki kutunun tamamını kopyala, [Google AI Studio](https://aistudio.goo
 - Göz 1, İçecek (1 tane seç): Espresso, Süt, Menengiç Kahvesi
 - Göz 2, Tatlı (1 tane seç): Kruvasan, San Sebastian Cheesecake, Fıstıklı Baklava
 - Göz 3, Kavanozlar (1 tane seç, yan yana ve birbirine benzer dursun, hangisinin şaka olduğu belli olmasın):
-  - Şeker (tatlı, 5 yıldız için gerekli)
-  - Tuz (ŞAKA malzemesi, rafta şekerle aynı görünür)
-  - Acı Sos (ŞAKA malzemesi)
+  - Şeker
+  - Tuz (şaka malzemesi, rafta şekerle aynı görünsün)
+  - Acı Sos (şaka malzemesi)
+  Ekranda hiçbir ürünün yanında "şaka" ya da "5 yıldız için gerekli" gibi bir etiket gösterme.
 
-3. GÖRSELLER: Ürün resimlerini şu adresten yükle:
-https://raw.githubusercontent.com/esrakadah/devfest-2026-backyard-barista-cloudrun/main/flutter_client/assets/base/{kategori}/{dosya}.png
-Dosyalar: drinks/espresso.png, drinks/milk.png, drinks/menengic_coffee.png, foods/croissant.png, foods/san_sebastian.png, foods/baklava.png, toppings_pranks/sugar_jar.png, toppings_pranks/salt_shaker.png, toppings_pranks/chili_sauce.png, customers/customer_happy.png, customers/customer_shocked.png, customers/customer_salty_disgusted.png
+3. GÖRSELLER: Ürün resimlerini bu adresin sonuna listedeki yolu ekleyerek yükle:
+https://raw.githubusercontent.com/esrakadah/devfest-2026-backyard-barista-cloudrun/main/flutter_client/assets/base/
+Yollar: drinks/espresso.png, drinks/milk.png, drinks/menengic_coffee.png, foods/croissant.png, foods/san_sebastian.png, foods/baklava.png, toppings_pranks/sugar_jar.png, toppings_pranks/salt_shaker.png, toppings_pranks/chili_sauce.png, customers/customer_happy.png, customers/customer_shocked.png, customers/customer_salty_disgusted.png
 Resim yüklenmezse her ürün için renkli bir inline SVG göster, oyun internetsiz de çalışsın.
 
 4. İKİ OYUNCU: Oyuncu 1 ("Barista") içecekleri seçer, Oyuncu 2 ("Pastacı") tatlı ve kavanozu seçer. Tepside küçük bir "🤫" rozeti olsun ama rafta kırmızı uyarı olmasın. Büyük bir "Siparişi Servis Et!" düğmesi ekle.

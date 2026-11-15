@@ -6,7 +6,7 @@
 
 1. Sağ üstte **Publish**, sonra **Get started** ve **Publish your app**. Uygulaman Cloud Run'da `https://...run.app` adresinde açılır. Gemini anahtarın sunucuda kalır, tarayıcıya gömülmez.
 2. İstersen sağ üstten **Sync to GitHub** ile kodu kendi GitHub hesabına gönder.
-3. `.run.app` linkini telefonundan aç, tatlıya tuz at, 1 yıldızı gör ve elini kaldır: sahnede 60 saniyelik demo ve ödül seni bekliyor. 🏆
+3. `.run.app` linkini telefonundan aç, tatlıya tuz at, 1 yıldızı gör ve elini kaldır: sahnede 60 saniyelik demo yap, ilk dört kafeye hediye var.
 
 Publish çıkmıyorsa: [örnek kafeyi](https://backyard-barista-389486729482.europe-west3.run.app/?remote_city=gaziantep) ve arkadaşlarının kafelerini test et (Yol C).
 
